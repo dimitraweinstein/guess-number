@@ -23,7 +23,7 @@ submitButton.addEventListener('click', () => {
     const results = compareNumbers(inputValue, randomNumber);
 
     if (results === 0) {
-        return guessRemainDiv.textContent = `Correct! You Guessed The Right Number! Try your luck and guess again!`;
+        return guessRemainDiv.textContent = `Correct! You Guessed The Right Number! Try your luck and guess again! Just click the Reset button!`;
     }
     
     else if (results === 1) {
@@ -34,7 +34,9 @@ submitButton.addEventListener('click', () => {
         return guessRemainDiv.textContent = `Sorry! your guess is lower than the chosen number. Guess again. You have ${guessRemain} number guesses remaining.`;
     }
     
-
+    else if (guessRemain-- < 1) {
+        return guessRemainDiv.textContent = `I'm sorry, you have lost the game! You have 0 guesses remaining. Click the Reset button and try again!`, submitButton.disabled;
+    }
 
 });
 
