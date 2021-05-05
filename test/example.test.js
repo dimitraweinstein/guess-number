@@ -16,3 +16,18 @@ test('time to test a function', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
+
+
+test('show that a number chosen equal to the random selected number will return a "correct" answer', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = true;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = compareNumbersAndUpdateDom(userInput);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});

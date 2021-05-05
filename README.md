@@ -35,7 +35,7 @@
 
     What happens when...
 
-1) When user clicks submit button
+1) When user enters a number and clicks submit button
     --check the number against the randomNumber generated
 
 2) When user clicks reset button
