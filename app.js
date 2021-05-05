@@ -1,16 +1,14 @@
 // import functions and grab DOM elements
-    
+    import { compareNumbers } from './utils.js';
 
 const userInput = document.getElementById('user-input');
 const submitButton = document.getElementById('submit-button');
 const resetButton = document.getElementById('reset-button');
-const resultsDiv = document.getElementById('results-div');
 const guessRemainDiv = document.getElementById('guess-remain-div');
 
 // initialize state
 const randomNumber = Math.ceil(Math.random() * 20);
 let guessRemain = '3';
-const inputValue = userInput.value;
 
 
 
@@ -19,9 +17,13 @@ const inputValue = userInput.value;
 // set event listeners to update state and DOM
 submitButton.addEventListener('click', () => {
     
-    compareNumbersAndUpdateDom(userInput);
+    const inputValue = Number(userInput.value);
 
-    resultsDiv.value = userInput;
+    console.log('this button works');
+
+    compareNumbers(inputValue, randomNumber);
+
+    // resultsDiv.textContent = ;
 
     if (userInput > randomNumber || userInput < randomNumber) {
         return guessRemain--;
@@ -31,10 +33,12 @@ submitButton.addEventListener('click', () => {
         return;
     }
 
-})
+});
+
+
 
 resetButton.addEventListener ('click', () => {
     
-    resultsDiv.document.hidden;
+    
 
 });
