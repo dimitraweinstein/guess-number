@@ -1,5 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
+import { compareNumbersAndUpdateDom } from './utils.js';
 
 const test = QUnit.test;
 
@@ -25,7 +26,7 @@ test('show that a number chosen equal to the random selected number will return 
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = compareNumbersAndUpdateDom(userInput);
+    const actual = ;
 
     //Expect
     // Make assertions about what is expected versus the actual result
